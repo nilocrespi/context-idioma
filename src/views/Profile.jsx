@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom"
+import {useLanguage} from "../context/LanguageContext";
 
 const texts = {
   es: {
@@ -15,23 +16,24 @@ const texts = {
   }
 };
 
-const Home = () => {
-    return (
-        <main>
-          <nav>
-              <ul>
-                  <li><Link to = "/">{texts.es.navHome}</Link></li>
-                  <li><Link to = "/profile">{texts.es.navProfile}</Link></li>
-              </ul>
-          </nav>
-          
-					<h2>{texts.es.title}</h2>
+const Profile = () => {
+  const {language} = useLanguage();
 
-          <p>{texts.es.paragraph}</p>
-              
-          <button>{texts.es.button}</button>
-        </main>
-    )
+  return (
+    <main>
+      <nav>
+        <ul>
+          <li><Link to = "/">{texts[language].navHome}</Link></li>
+          <li><Link to = "/profile">{texts[language].navProfile}</Link></li>
+        </ul>
+      </nav>
+
+		  <h2>{texts[language].title}</h2>
+
+      <p>{texts[language].paragraph}</p>
+
+    </main>
+  )
 }
 
-export default Home
+export default Profile

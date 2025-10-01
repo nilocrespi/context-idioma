@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom"
+import {useLanguage} from "../context/LanguageContext";
 
 const texts = {
   es: {
@@ -18,20 +19,22 @@ const texts = {
 };
 
 const Home = () => {
+    const {language, toggleLanguage} = useLanguage();
+
     return (
         <main>
           <nav>
               <ul>
-                  <li><Link to = "/">{texts.es.navHome}</Link></li>
-                  <li><Link to = "/profile">{texts.es.navProfile}</Link></li>
+                  <li><Link to = "/">{texts[language].navHome}</Link></li>
+                  <li><Link to = "/profile">{texts[language].navProfile}</Link></li>
               </ul>
           </nav>
           
-					<h2>{texts.es.title}</h2>
+					<h2>{texts[language].title}</h2>
 
-          <p>{texts.es.paragraph}</p>
+          <p>{texts[language].paragraph}</p>
               
-          <button>{texts.es.button}</button>
+          <button onClick={toggleLanguage}>{texts[language].button}</button>
         </main>
     )
 }

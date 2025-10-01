@@ -1,16 +1,33 @@
-# React + Vite
+Consigna: Contexto de idioma en React
+Vas a crear una aplicación simple en React que utilice Context API para manejar un idioma global en la aplicación.
+Objetivo
+Implementar un LanguageContext que permita alternar entre Español e Inglés.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Mostrar que el idioma elegido afecta a todas las vistas de la app.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+Requisitos
+Crea un contexto global que guarde el idioma actual y una función para cambiarlo.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+La aplicación debe tener al menos dos vistas (ejemplo: Inicio y Perfil).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+En la vista de Inicio debe aparecer un botón que permita cambiar el idioma.
+
+
+El contenido textual (títulos, párrafos, botones) debe mostrarse en el idioma elegido.
+
+
+Cuando cambies el idioma en Inicio, también debe reflejarse automáticamente en la vista de Perfil (sin pasar props manualmente).
+
+
+Usa un navegador de rutas para poder moverte entre vistas (ejemplo: Inicio ↔ Perfil).
+
+
+Entrega
+Entregar la aplicación funcionando en React.
+
+
+Incluir una breve explicación de cómo useContext ayudó a evitar el prop drilling.
