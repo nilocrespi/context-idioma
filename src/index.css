@@ -1,0 +1,26 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:aquamarine;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
